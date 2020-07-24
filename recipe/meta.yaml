@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   number: 2
-  script: {{ python }} -m pip install --no-deps .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -21,14 +21,14 @@ requirements:
     - pip
   run:
     - python >=3
-    - rapidz
-    - numpy
-    - scipy
-    - matplotlib-base
-    - databroker
     - bluesky
+    - databroker
     - event-model
+    - matplotlib-base
     - networkx >=2.0
+    - numpy
+    - rapidz
+    - scipy
     - xonsh
 
 test:
