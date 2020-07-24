@@ -12,8 +12,8 @@ source:
 
 build:
   noarch: python
-  number: 1
-  script: python -m pip install --no-deps .
+  number: 2
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -21,14 +21,14 @@ requirements:
     - pip
   run:
     - python >=3
-    - rapidz
-    - numpy
-    - scipy
-    - matplotlib-base
-    - databroker
     - bluesky
+    - databroker
     - event-model
+    - matplotlib-base
     - networkx >=2.0
+    - numpy
+    - rapidz
+    - scipy
     - xonsh
 
 test:
@@ -44,7 +44,3 @@ about:
   summary: 'Streaming Heterogeneous Event Data'
   doc_url: https://xpdacq.github.io/SHED/ 
   dev_url: https://github.com/xpdAcq/SHED
-
-extra:
-  recipe-maintainers:
-    - st3107
