@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -42,5 +42,5 @@ about:
   license_family: BSD
   license_file: LICENSE
   summary: 'Streaming Heterogeneous Event Data'
-  doc_url: https://xpdacq.github.io/SHED/ 
+  doc_url: https://xpdacq.github.io/SHED/
   dev_url: https://github.com/xpdAcq/SHED
